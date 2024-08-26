@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="./src/output.css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3LEGANT</title>
+</head>
+
+<body class="font-inter">
+    <header class="bg-[#F3F5F7] px-5 py-2" id="header">
+        <div class="flex justify-between md:text-sm text-xs">
+            <div></div>
+            <div class="flex justify-center items-center gap-3">
+                <img src="./src/img/header-icon.png" alt="ticket-icon">
+                <p class="text-[#343839] font-semibold">30% off storewide — Limited time! </p>
+                <p class="text-[#377DFF] underline underline-offset-4 md:block hidden">Shop Now &#8594;</p>
+            </div>
+            <div>
+                <span id="close-header" class="text-[#343839] text-2xl cursor-pointer">&#215;</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="max-w-[1120px] flex justify-between items-center mx-auto py-[18px] md:px-0 px-8">
+                <div class="md:text-2xl text-base font-medium flex items-center gap-1 ">
+                    <img id="burger-menu-icon"
+                        src="https://cdn4.iconfinder.com/data/icons/interface-essential-vol-1/24/navigation-menu-1--button-parallel-vertical-lines-menu-navigation-three-hamburger-512.png"
+                        alt="burger menu" class="w-6 md:hidden">
+                    <h1 class="cursor-pointer">3legant. </h1>
+                </div>
+                <div>
+                    <nav>
+                        <ul class="md:flex hidden gap-10  text-[#6C7275]">
+                            <li class="text-black font-medium cursor-pointer">Home</li>
+                            <li class="cursor-pointer">Shop</li>
+                            <li class="cursor-pointer">Product</li>
+                            <li class="cursor-pointer">Contact Us</li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="flex justify-center items-center gap-[18px]">
+                    <div class="md:flex hidden gap-[18px]">
+                        <img class="w-6 h-6 cursor-pointer" src="./src/img/search-menu.png" alt="search">
+                        <img class="w-6 h-6 cursor-pointer" src="./src/img/account-menu.png" alt="account">
+                    </div>
+                    <div class="flex items-center gap-[5px]">
+                        <img class="w-6 h-6 cursor-pointer" src="./src/img/shop-menu.png" alt="shop">
+                        <img class="w-[20px] h-[20px] cursor-pointer" src="./src/img/two-menu.png" alt="two">
+                    </div>
+
+                </div>
+            </div>
+            <div id="burger-menu" class="hidden  w-full h-screen">
+                <nav>
+                    <ul class="gap-24 text-3xl flex flex-col mb-10 justify-center items-center text-[#6C7275]">
+                        <li class="text-black font-medium cursor-pointer">Home</li>
+                        <li class="cursor-pointer">Shop</li>
+                        <li class="cursor-pointer">Product</li>
+                        <li class="cursor-pointer">Contact Us</li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <section class="md:px-0 px-8">
+            <div
+                class="bg-cover bg-center max-w-[1140px]   mx-auto bg-[url('https://s3-alpha-sig.figma.com/img/0448/da12/7ecfa3700fbcca8f347e6e197dcfb8d1?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pMhJZ~4gJC3rgBQWN-llQeIF9Ik2CQz32fgqVk7YhPeBZZQs~Gn1hrzlUI~bqwTWC3O~yqyqZ38aif77ikyAOKSWLUraKRxU4F38BPyk~FF5X5Yi1OP61IghQwUlwp6LXcDiIZ9rVP1mdClTqddiIsqYSbK5oRUBhU~GguvRYfTdrMMuYU6cW-JYRwBq8G8kg9K50UzHnA~aNUhL4fKO0T~ZbrDg8vhacADM~JV6iwnMQ8SBsM3zTY-9l95GoYcCNjnMeX320gUNGfzePusQHXVnsWZoZsHiftDw7BNA4I2B5nUWWR5UolYffZoXzz8ZlmWE2yyDbE7DTg273KXU5w__')]">
+                <div class="flex flex-col justify-center items-center py-[115px]">
+                    <div class="flex text-[#605F5F]">
+                        <p>Home </p>
+                        <span class="ml-[9px] mr-[20px]">&#x3e;</span>
+                        <p class="text-black font-medium">Shop</p>
+                    </div>
+                    <h2 class="md:text-[54px] text-[40px] font-medium">Shop Page</h2>
+                    <p class="md:text-[20px] text-base text-center">Let’s design the place you always imagined.</p>
+                </div>
+            </div>
+        </section>
+        <section class="md:px-0 px-8">
+            <div class="flex md:flex-row flex-col justify-between max-w-[1120px] md:items-end items-start mx-auto">
+                <div class="flex md:flex-row flex-col gap-6 md:mt-[60px] md:mb-0 mb-8 mt-8  w-full">
+                    <div class="md:w-auto w-full">
+                        <p class="text-[#6C7275]">CATEGORIES</p>
+                        <select id="categories"
+                            class="border w-full mt-2 border-solid border-[#6C7275] cursor-pointer pl-4 py-[14px] pr-16 rounded"></select>
+                    </div>
+                    <div class="md:w-auto w-full">
+                        <p class="text-[#6C7275]">PRICE</p>
+                        <select id="price"
+                            class="border mt-2  w-full border-solid border-[#6C7275] cursor-pointer pl-4 py-[14px] pr-16 rounded">
+                            <option value="All">All Prices</option>
+                            <option value="50">&#60;$50</option>
+                            <option value="100">&#60;$100</option>
+                            <option value="500">&#60;$500</option>
+                            <option value="1000">&#60;$1000</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex items-center gap-9 w-full md:w-auto">
+                    <div class="font-semibold w-full md:w-auto">
+                        <select class="w-full md:w-auto" id="sort">
+                            <option value="" default>Sort By </option>
+                            <option value="asc">Asc.</option>
+                            <option value="desc">Desc.</option>
+                        </select>
+                    </div>
+                    <div class="flex max-w-full">
+                        <img class="cursor-pointer md:block max-w-none hidden" id="sort-one"
+                            src="./src/img/sort-one.png" alt="sort icon">
+                        <img class="cursor-pointer md:block hidden max-w-none" id="sort-two"
+                            src="./src/img/sort-two.png" alt="sort icon">
+                        <img class="cursor-pointer max-w-none" src="./src/img/sort-three.png" alt="sort icon">
+                        <img class="cursor-pointer max-w-none" src="./src/img/sort-four.png" alt="sort icon">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="md:px-0 px-8">
+            <div id="shop" class="flex flex-col items-center max-w-[1120px] mx-auto">
+                <div id="shop-list" class="max-w-[1120px] flex flex-wrap gap-5 mt-10">
+
+                </div>
+                <button id="show-more"
+                    class="border border-solid border-black px-10 py-[6px] rounded-[80px] mt-20 mb-[106px]">Show
+                    More</button>
+            </div>
+        </section>
+        <section
+            class=" bg-[url('https://s3-alpha-sig.figma.com/img/0448/da12/7ecfa3700fbcca8f347e6e197dcfb8d1?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pMhJZ~4gJC3rgBQWN-llQeIF9Ik2CQz32fgqVk7YhPeBZZQs~Gn1hrzlUI~bqwTWC3O~yqyqZ38aif77ikyAOKSWLUraKRxU4F38BPyk~FF5X5Yi1OP61IghQwUlwp6LXcDiIZ9rVP1mdClTqddiIsqYSbK5oRUBhU~GguvRYfTdrMMuYU6cW-JYRwBq8G8kg9K50UzHnA~aNUhL4fKO0T~ZbrDg8vhacADM~JV6iwnMQ8SBsM3zTY-9l95GoYcCNjnMeX320gUNGfzePusQHXVnsWZoZsHiftDw7BNA4I2B5nUWWR5UolYffZoXzz8ZlmWE2yyDbE7DTg273KXU5w__')]">
+            <div class="max-w-[540px] mx-auto pt-[101px] pb-[83px] text-center flex flex-col items-center md:px-0 px-8">
+                <h2 class="font-medium md:text-[40px] text-[28px] ">Join Our Newsletter</h2>
+                <p class="md:text-lg text-sm mt-2 mb-8">Sign up for deals, new products and promotions</p>
+                <div>
+                    <div class="flex justify-center md:px-0 items-center gap-2">
+                        <img src="./src/img/mail-icon.png" alt="mail-icon">
+                        <input class="bg-transparent md:pr-36" type="text" placeholder="Email address">
+                        <p class="font-medium text-[#6C7275]">Signup</p>
+                    </div>
+                    <hr class="mt-2 border border-solid border-[#6C727580]">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-black text-[#E8ECEF]">
+        <div class="flex md:flex-row flex-col justify-between items-center max-w-[1120px] mx-auto pt-20">
+            <div class="flex md:flex-row flex-col justify-center items-center md:gap-8 gap-2">
+                <h2 class="font-medium text-2xl ">3legant.</h2>
+                <p class="text-[#6C7275]">|</p>
+                <p class="text-sm">Gift & Decoration Store</p>
+            </div>
+            <div>
+                <nav>
+                    <ul class="flex  gap-10 justify-center items-center md:flex-row flex-col">
+                        <li class="cursor-pointer">Home</li>
+                        <li class="cursor-pointer">Shop</li>
+                        <li class="cursor-pointer">Product</li>
+                        <li class="cursor-pointer">Blog</li>
+                        <li class="cursor-pointer">Contact Us</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <hr class="mt-[49px] mb-4 max-w-[1120px] mx-auto border border-solid border-[#6C7275]">
+        <div class="flex max-w-[1120px] mx-auto justify-between items-center pb-8 md:flex-row flex-col-reverse">
+            <div class="flex justify-center items-center gap-[28px] text-xs md:flex-row flex-col-reverse pt-8 md:pt-0">
+                <p class="text-[#FEFEFE] ">Copyright © 2023 3legant. All rights reserved</p>
+                <div class="flex gap-[28px]">
+                    <p>Privacy Policy</p>
+                    <p>Terms of Use</p>
+                </div>
+            </div>
+            <div class="flex justify-center items-center gap-6">
+                <img src="./src/img/instagram-icon.png" alt="instagram">
+                <img src="./src/img/fb-icon.png" alt="fb">
+                <img src="./src/img/ytb-icon.png" alt="youtube">
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

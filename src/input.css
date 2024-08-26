@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.shop-page {
+    @apply bg-[url('https://s3-alpha-sig.figma.com/img/0448/da12/7ecfa3700fbcca8f347e6e197dcfb8d1?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pMhJZ~4gJC3rgBQWN-llQeIF9Ik2CQz32fgqVk7YhPeBZZQs~Gn1hrzlUI~bqwTWC3O~yqyqZ38aif77ikyAOKSWLUraKRxU4F38BPyk~FF5X5Yi1OP61IghQwUlwp6LXcDiIZ9rVP1mdClTqddiIsqYSbK5oRUBhU~GguvRYfTdrMMuYU6cW-JYRwBq8G8kg9K50UzHnA~aNUhL4fKO0T~ZbrDg8vhacADM~JV6iwnMQ8SBsM3zTY-9l95GoYcCNjnMeX320gUNGfzePusQHXVnsWZoZsHiftDw7BNA4I2B5nUWWR5UolYffZoXzz8ZlmWE2yyDbE7DTg273KXU5w__')]
+}
+
+.shop-item {
+    @apply flex max-w-[548px] justify-center items-center border border-solid border-black
+}
+
+.shop-img-div {
+    @apply max-w-[262px]
+}
+
+.shop-img {
+    @apply w-full max-w-[262px]
+}
+
+.shop-content {
+    @apply p-6 max-w-[282px]
+}
+
+.item-title {
+    @apply font-semibold max-w-[230px] pt-4 pb-1
+}
+
+.item-price {
+    @apply font-semibold text-sm
+}
+
+.item-desc {
+    @apply text-sm text-[#3E3E59] pt-4 pb-6
+}
+
+.item-button-div {
+    @apply flex flex-col
+}
+
+.wishlist {
+    @apply flex justify-center items-center gap-1
+}
+
+.card-btn {
+    @apply text-white bg-black px-[74px] py-[9px] rounded-lg mb-2
+}
+
+.item-one {
+    @apply flex flex-col max-w-[262px] items-start justify-center
+}
+.shop-img-one{
+    @apply max-w-[262px] 
+}
