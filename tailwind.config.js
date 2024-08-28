@@ -10,6 +10,11 @@ module.exports = {
         shop: "url('./src/img/bg-image.png')",
         join: "url('./img/join-image.png')",
       },
+      gridTemplateColumns: {
+        "2-cols": "repeat(2, minmax(0, 1fr))",
+        "3-cols": "repeat(3, minmax(0, 1fr))",
+        "4-cols": "repeat(4, minmax(0, 1fr))",
+      },
     },
   },
   plugins: [],

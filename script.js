@@ -49,18 +49,38 @@ let lastCalledFunction = null;
 
 //grid
 
+function updateShopItemStyles(styleClass) {
+  const shopItems = document.querySelectorAll("#shop-list .shop-item");
+  shopItems.forEach((item) => {
+    item.classList.remove("shop-item-style-one", "shop-item-style-two");
+  });
+  shopList.classList.remove("shop-list-four");
+  if (styleClass === "shop-item-style-four") {
+    shopList.classList.add("shop-list-four");
+  }
+  shopItems.forEach((item) => {
+    item.classList.add(styleClass);
+  });
+}
+
 const sortIcons = document.querySelectorAll(".sort-grid");
 sortIcons.forEach((icon) => {
   icon.addEventListener("click", () => {
     sortIcons.forEach((item) => item.classList.remove("active-grid"));
     icon.classList.add("active-grid");
+    switch (icon.id) {
+      case "sorting-one":
+        updateShopItemStyles("shop-item-style-one");
+        break;
+      case "sorting-two":
+        updateShopItemStyles("shop-item-style-two");
+        break;
+      case "sorting-four":
+        updateShopItemStyles("shop-item-style-four");
+        break;
+    }
   });
 });
-// let sortStyle = "";
-// const sortingOne = document.querySelector("#sorting-one");
-// const sortingTwo = document.querySelector("#sorting-two");
-// const sortingThree = document.querySelector("#sorting-three");
-// const sortingFour = document.querySelector("#sorting-four");
 
 function showData(data) {
   shopList.innerHTML = "";

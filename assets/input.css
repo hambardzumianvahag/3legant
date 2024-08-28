@@ -12,13 +12,9 @@
     @apply flex flex-col
 }
 
-.shop-item {
-    @apply flex max-w-full md:max-w-[calc(50%-1rem)] justify-between items-start border border-solid border-gray-300 rounded-lg overflow-hidden shadow-sm bg-white;
-    margin-bottom: 2rem;
-}
-
 .shop-img-div {
-    @apply w-1/2 md:w-[50%] h-full;
+    @apply h-full max-w-[250px];
+    /* w-1/2 md:w-[50%] */
 }
 
 .shop-img {
@@ -26,7 +22,8 @@
 }
 
 .shop-content {
-    @apply p-4 md:p-6 w-1/2 md:w-[50%] flex flex-col justify-between;
+    @apply p-4 md:p-6 max-w-[250px] flex flex-col justify-between;
+    /*  w-1/2 md:w-[50%] */
 }
 
 .item-category {
@@ -54,11 +51,8 @@
 }
 
 .card-btn {
-    @apply text-white bg-black md:px-[64px] md:py-[9px] px-2 py-2 rounded-lg mb-2
-}
-
-.item-one {
-    @apply flex flex-col max-w-[262px] items-start justify-center
+    @apply text-white bg-black md:px-[4px] md:py-[9px] px-2 py-2 rounded-lg mb-2
+    /* md:px-[64px] */
 }
 
 .shop-img-one {
@@ -68,3 +62,15 @@
 .active-grid {
     @apply bg-[#E8ECEF]
 }
+
+.shop-item-style-one {
+    @apply flex-col justify-center items-center m-0 max-w-[265px] !important
+}
+
+.shop-item {
+    @apply flex max-w-full md:max-w-[calc(50%-1rem)] border border-solid border-gray-300 rounded-lg overflow-hidden shadow-sm bg-white mb-2;
+}
+
+/* .shop-item-four {
+    @apply  flex flex-col w-full mx-auto bg-red-600 !important
+} */
