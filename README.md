@@ -41,7 +41,7 @@ To run this project locally, follow these steps:
 
    cd 3legant
 
-    npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
+    npx tailwindcss -i ./assets/input.css -o ./assets/output.css --watch
 
    Open index.html in your browser or use a local server like Live Server for development.
 

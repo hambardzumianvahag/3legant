@@ -8,24 +8,33 @@
     @apply bg-[url('https://s3-alpha-sig.figma.com/img/0448/da12/7ecfa3700fbcca8f347e6e197dcfb8d1?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pMhJZ~4gJC3rgBQWN-llQeIF9Ik2CQz32fgqVk7YhPeBZZQs~Gn1hrzlUI~bqwTWC3O~yqyqZ38aif77ikyAOKSWLUraKRxU4F38BPyk~FF5X5Yi1OP61IghQwUlwp6LXcDiIZ9rVP1mdClTqddiIsqYSbK5oRUBhU~GguvRYfTdrMMuYU6cW-JYRwBq8G8kg9K50UzHnA~aNUhL4fKO0T~ZbrDg8vhacADM~JV6iwnMQ8SBsM3zTY-9l95GoYcCNjnMeX320gUNGfzePusQHXVnsWZoZsHiftDw7BNA4I2B5nUWWR5UolYffZoXzz8ZlmWE2yyDbE7DTg273KXU5w__')]
 }
 
+.shop-item-one {
+    @apply flex flex-col
+}
+
 .shop-item {
-    @apply flex max-w-[548px] justify-center items-center border border-solid border-black
+    @apply flex max-w-full md:max-w-[calc(50%-1rem)] justify-between items-start border border-solid border-gray-300 rounded-lg overflow-hidden shadow-sm bg-white;
+    margin-bottom: 2rem;
 }
 
 .shop-img-div {
-    @apply max-w-[262px]
+    @apply w-1/2 md:w-[50%] h-full;
 }
 
 .shop-img {
-    @apply w-full max-w-[262px]
+    @apply w-full h-full md:object-cover;
 }
 
 .shop-content {
-    @apply p-6 max-w-[282px]
+    @apply p-4 md:p-6 w-1/2 md:w-[50%] flex flex-col justify-between;
+}
+
+.item-category {
+    @apply text-xs text-gray-500 uppercase tracking-wider;
 }
 
 .item-title {
-    @apply font-semibold max-w-[230px] pt-4 pb-1
+    @apply font-semibold max-w-[230px] pt-4 pb-1 line-clamp-3
 }
 
 .item-price {
@@ -33,11 +42,11 @@
 }
 
 .item-desc {
-    @apply text-sm text-[#3E3E59] pt-4 pb-6
+    @apply text-sm text-gray-600 mt-2 line-clamp-3;
 }
 
 .item-button-div {
-    @apply flex flex-col
+    @apply mt-8 flex flex-col
 }
 
 .wishlist {
@@ -45,12 +54,17 @@
 }
 
 .card-btn {
-    @apply text-white bg-black px-[74px] py-[9px] rounded-lg mb-2
+    @apply text-white bg-black md:px-[64px] md:py-[9px] px-2 py-2 rounded-lg mb-2
 }
 
 .item-one {
     @apply flex flex-col max-w-[262px] items-start justify-center
 }
-.shop-img-one{
-    @apply max-w-[262px] 
+
+.shop-img-one {
+    @apply max-w-[262px]
+}
+
+.active-grid {
+    @apply bg-[#E8ECEF]
 }

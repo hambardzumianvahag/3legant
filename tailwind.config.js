@@ -8,7 +8,7 @@ module.exports = {
       },
       backgroundImage: {
         shop: "url('./src/img/bg-image.png')",
-        join: "url('./src/img/join-image.png')",
+        join: "url('./img/join-image.png')",
       },
     },
   },
