@@ -695,10 +695,6 @@ video {
   flex-direction: column-reverse;
 }
 
-.flex-wrap{
-  flex-wrap: wrap;
-}
-
 .items-start{
   align-items: flex-start;
 }
@@ -733,10 +729,6 @@ video {
 
 .gap-3{
   gap: 0.75rem;
-}
-
-.gap-5{
-  gap: 1.25rem;
 }
 
 .gap-6{
@@ -1171,6 +1163,21 @@ video {
   align-items: center !important;
 }
 
+.shop-list{
+  margin-top: 2.5rem;
+  display: flex;
+  max-width: 1120px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px){
+  .shop-list{
+    margin-bottom: 50px;
+  }
+}
+
 .shop-item-style-four{
   margin: 0px !important;
   width: 100% !important;
@@ -1195,10 +1202,6 @@ video {
 
   .md\:mb-0{
     margin-bottom: 0px;
-  }
-
-  .md\:mb-\[50px\]{
-    margin-bottom: 50px;
   }
 
   .md\:mt-20{

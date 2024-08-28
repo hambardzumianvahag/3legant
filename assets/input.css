@@ -75,6 +75,10 @@
     @apply flex flex-col w-full mx-auto items-center !important
 }
 
+.shop-list {
+    @apply max-w-[1120px] flex flex-wrap justify-center gap-5 mt-10 md:mb-[50px]
+}
+
 .shop-item-style-four {
     @apply flex-col justify-center items-center m-0 w-full max-w-full !important
 }

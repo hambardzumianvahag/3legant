@@ -49,19 +49,20 @@ let lastCalledFunction = null;
 
 //grid
 
-function updateShopItemStyles(styleClass) {
+const updateShopItemStyles = (styleClass) => {
   const shopItems = document.querySelectorAll("#shop-list .shop-item");
   shopItems.forEach((item) => {
-    item.classList.remove("shop-item-style-one", "shop-item-style-two");
-  });
-  shopList.classList.remove("shop-list-four");
-  if (styleClass === "shop-item-style-four") {
-    shopList.classList.add("shop-list-four");
-  }
-  shopItems.forEach((item) => {
+    item.className = "shop-item";
     item.classList.add(styleClass);
   });
-}
+  shopList.className = "";
+  if (styleClass === "shop-item-style-four") {
+    shopList.classList.add("shop-list-four");
+  } else {
+    shopList.classList.add("shop-list");
+    shopList.classList.remove("shop-list-four");
+  }
+};
 
 const sortIcons = document.querySelectorAll(".sort-grid");
 sortIcons.forEach((icon) => {
@@ -121,34 +122,26 @@ async function getData() {
 getData();
 
 showMore.addEventListener("click", () => {
-  if (lastCalledFunction === "getData") {
-    if (limit.all >= 16) {
-      showMore.style.display = "none";
+  const isSorting =
+    lastCalledFunction === "asc" || lastCalledFunction === "desc";
+
+  const limitKey = isSorting
+    ? `sort${
+        lastCalledFunction.charAt(0).toUpperCase() + lastCalledFunction.slice(1)
+      }`
+    : "all";
+  if (limit[limitKey] >= 16) {
+    showMore.style.display = "none";
+  } else {
+    limit[limitKey] += 4;
+    showMore.style.display = limit[limitKey] >= 16 ? "none" : "block";
+    if (isSorting) {
+      sorting(
+        `https://fakestoreapi.com/products?sort=${lastCalledFunction}&limit=${limit[limitKey]}`
+      );
     } else {
-      showMore.style.display = "block";
+      getData();
     }
-    limit.all += 4;
-    getData();
-  } else if (lastCalledFunction === "asc") {
-    if (limit.sortAsc >= 16) {
-      showMore.style.display = "none";
-    } else {
-      showMore.style.display = "block";
-    }
-    limit.sortAsc += 4;
-    sorting(
-      `https://fakestoreapi.com/products?sort=asc&limit=${limit.sortAsc}`
-    );
-  } else if (lastCalledFunction === "desc") {
-    if (limit.sortDesc >= 16) {
-      showMore.style.display = "none";
-    } else {
-      showMore.style.display = "block";
-    }
-    limit.sortDesc += 4;
-    sorting(
-      `https://fakestoreapi.com/products?sort=desc&limit=${limit.sortDesc}`
-    );
   }
 });
 
@@ -175,7 +168,7 @@ async function getCategory(category) {
 
 // category select
 
-selectCategories.addEventListener("click", () => {
+selectCategories.addEventListener("change", () => {
   getCategory(selectCategories.value);
 });
 
@@ -191,20 +184,9 @@ async function sorting(url) {
 
 sort.addEventListener("click", () => {
   lastCalledFunction = sort.value;
-  switch (sort.value) {
-    case "asc":
-      limit.sortAsc = 4;
-      showMore.style.display = "block";
-      sorting(
-        `https://fakestoreapi.com/products?sort=asc&limit=${limit.sortAsc}`
-      );
-      break;
-    case "desc":
-      limit.sortDesc = 4;
-      showMore.style.display = "block";
-      sorting(
-        `https://fakestoreapi.com/products?sort=desc&limit=${limit.sortDesc}`
-      );
-      break;
-  }
+  limit[lastCalledFunction] = 4;
+  showMore.style.display = "block";
+  sorting(
+    `https://fakestoreapi.com/products?sort=${sort.value}&limit=${limit[lastCalledFunction]}`
+  );
 });
