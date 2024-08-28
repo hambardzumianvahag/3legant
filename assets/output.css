@@ -1162,11 +1162,37 @@ video {
   }
 }
 
-/* .shop-item-four {
-    @apply  flex flex-col w-full mx-auto bg-red-600 !important
-} */
+.shop-list-four{
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: flex !important;
+  width: 100% !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.shop-item-style-four{
+  margin: 0px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.shop-item-style-four .shop-content{
+  display: flex !important;
+  max-width: 900px !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding: 1rem !important;
+}
 
 @media (min-width: 768px){
+  .shop-item-style-four .shop-content{
+    padding: 1.5rem !important;
+  }
+
   .md\:mb-0{
     margin-bottom: 0px;
   }

@@ -71,6 +71,14 @@
     @apply flex max-w-full md:max-w-[calc(50%-1rem)] border border-solid border-gray-300 rounded-lg overflow-hidden shadow-sm bg-white mb-2;
 }
 
-/* .shop-item-four {
-    @apply  flex flex-col w-full mx-auto bg-red-600 !important
-} */
+.shop-list-four {
+    @apply flex flex-col w-full mx-auto items-center !important
+}
+
+.shop-item-style-four {
+    @apply flex-col justify-center items-center m-0 w-full max-w-full !important
+}
+
+.shop-item-style-four .shop-content {
+    @apply p-4 md:p-6 max-w-[900px] flex flex-col justify-between !important
+}
